@@ -1,0 +1,21 @@
+body {
+  background-color: #3DA5D9;
+  color: #3F403F;
+}
+
+.card{
+  padding-left: 8px;
+  padding-bottom: 4px;
+}
+
+.font1{
+  font-family: 'Slackey', cursive;
+}
+
+.font2{
+  font-family: 'Shrikhand', cursive;
+}
+
+.font3{
+  font-family: 'Cagliostro', sans-serif;
+}

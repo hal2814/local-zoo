@@ -6,8 +6,8 @@ import { Animal } from './animal.model';
   template: `
     <div class="row">
       <div class="col-md-6">
-        <h1>Animals</h1>
-        <h3>{{currentFocus}}</h3>
+        <h1 class="font2">Animals</h1>
+        <h3 class="font2">{{currentFocus}}</h3>
         <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
         <hr>
       </div>
@@ -20,7 +20,7 @@ import { Animal } from './animal.model';
 })
 
 export class AppComponent {
-  currentFocus: string = 'Local Zoo'
+  currentFocus: string = 'at your local zoo'
   selectedAnimal = null;
   masterAnimalList: Animal[] = [
     new Animal('Sloth', 'Speedy', 5, 'Herbivore', 'Jungle Building', 3, 'Male', 'Rubbed behind the ears', 'Lemons'),
