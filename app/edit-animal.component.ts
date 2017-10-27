@@ -26,7 +26,7 @@ import { Animal } from './animal.model';
           <input [(ngModel)]="childSelectedAnimal.likes">
           <label>Enter Animal dislikes: </label><br>
           <input [(ngModel)]="childSelectedAnimal.dislikes">
-          <button (click)="doneButtonClicked()">Done</button>
+          <button (click)="doneButtonClicked()">Update</button>
         </div>
       </div>
   `
