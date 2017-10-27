@@ -28,6 +28,10 @@ npm install && bower install && gulp build && gulp serve
 
 ## Future Features
 
+*_Convert css to SASS_
+
+*_Show total number of caretakers needed for zoo_
+
 ## Technologies Used
 _Angular 2, HTML, CSS, JavaScript, jQuery, built and served with Bower and Gulp._
 
