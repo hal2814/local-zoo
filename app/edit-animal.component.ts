@@ -6,26 +6,36 @@ import { Animal } from './animal.model';
   template: `
     <div>
         <div *ngIf="childSelectedAnimal">
-          <h3>Edit Animal</h3>
-          <h4>{{childSelectedAnimal.name}}</h4>
+          <h3>Edit {{childSelectedAnimal.name}} the {{childSelectedAnimal.species}}</h3>
+
           <label>Enter Animal species: </label>
-          <input [(ngModel)]="childSelectedAnimal.species">
-          <label>Enter Animal name: </label><br>
-          <input [(ngModel)]="childSelectedAnimal.name">
-          <label>Enter Animal age: </label><br>
-          <input [(ngModel)]="childSelectedAnimal.age">
-          <label>Enter Animal diet: </label><br>
-          <input [(ngModel)]="childSelectedAnimal.diet">
-          <label>Enter Animal location: </label><br>
-          <input [(ngModel)]="childSelectedAnimal.location">
-          <label>Enter Animal caretakers: </label><br>
-          <input [(ngModel)]="childSelectedAnimal.caretakers">
-          <label>Enter Animal sex: </label><br>
-          <input [(ngModel)]="childSelectedAnimal.sex">
-          <label>Enter Animal likes: </label><br>
-          <input [(ngModel)]="childSelectedAnimal.likes">
-          <label>Enter Animal dislikes: </label><br>
-          <input [(ngModel)]="childSelectedAnimal.dislikes">
+          <input [(ngModel)]="childSelectedAnimal.species"><br>
+
+          <label>Enter Animal name: </label>
+          <input [(ngModel)]="childSelectedAnimal.name"><br>
+
+
+          <label>Enter Animal age: </label>
+          <input [(ngModel)]="childSelectedAnimal.age"><br>
+
+          <label>Enter Animal diet: </label>
+          <input [(ngModel)]="childSelectedAnimal.diet"><br>
+
+          <label>Enter Animal location: </label>
+          <input [(ngModel)]="childSelectedAnimal.location"><br>
+
+          <label>Enter Animal caretakers: </label>
+          <input [(ngModel)]="childSelectedAnimal.caretakers"><br>
+
+          <label>Enter Animal sex: </label>
+          <input [(ngModel)]="childSelectedAnimal.sex"><br>
+
+          <label>Enter Animal likes: </label>
+          <input [(ngModel)]="childSelectedAnimal.likes"><br>
+
+          <label>Enter Animal dislikes: </label>
+          <input [(ngModel)]="childSelectedAnimal.dislikes"><br>
+
           <button (click)="doneButtonClicked()">Update</button>
         </div>
       </div>
@@ -35,6 +45,7 @@ import { Animal } from './animal.model';
 export class EditAnimalComponent {
   @Input() childSelectedAnimal: Animal;
   @Output() doneButtonClickedSender = new EventEmitter();
+
   doneButtonClicked() {
     this.doneButtonClickedSender.emit();
   }

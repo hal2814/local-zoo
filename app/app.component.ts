@@ -4,14 +4,17 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="container">
-      <h1>Animals</h1>
-      <h3>{{currentFocus}}</h3>
-      <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-      <hr>
-      <edit-animal [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-
-      <new-animal (newKegSender)="addKeg($event)"></new-animal>
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Animals</h1>
+        <h3>{{currentFocus}}</h3>
+        <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+        <hr>
+      </div>
+      <div class="col-md-6">
+        <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+        <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+      </div>
     </div>
   `
 })
@@ -33,7 +36,7 @@ export class AppComponent {
   }
 
   addAnimal(newAnimalFromChild: Animal) {
-    this.masterAnimalList.push(newAnimalFromChild);
+    this.masterAnimalList.unshift(newAnimalFromChild);
   }
 
 }
