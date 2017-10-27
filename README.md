@@ -29,6 +29,6 @@ npm install && bower install && gulp build && gulp serve
 ## Future Features
 
 ## Technologies Used
-_Angular 2, HTML, CSS, JavaScript, jQuery, built and served with Bower and Gulp. Reliant on the betterdoctor.com API and the Google Maps geocoder API._
+_Angular 2, HTML, CSS, JavaScript, jQuery, built and served with Bower and Gulp._
 
 Copyright (c) 2017 **_Nate McGregor_**
